@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var User     = mongoose.model('User');
 var bcrypt   = require('bcrypt-nodejs');
-//var jwt      = require('jsonwebtoken');
+var jwt      = require('jsonwebtoken');
 
 
 
