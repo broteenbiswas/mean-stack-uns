@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="meanvols">
+    <head>
+
+        <title>
+            YOU N SOCIETY(UNS)
+        </title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/custom.css" rel="stylesheet" />
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="/angular-app/app.js"></script>
+<script src="/angular-app/vol-list/volList.controller.js"></script>
+<script src="/angular-app/vol-data-factory/vol-data-factory.js"></script>
+<script src="/angular-app/vol-detail/voldetail.controller.js"></script>
+<script src="/angular-app/register/register.controller.js"></script>
+<script src="/angular-app/navigation-directive/navigation.directive.js"></script>
+<script src="/angular-app/login/login.controller.js"></script>
+
+    </head>
+<body>
+
+  
+
+    <mh-navigation></mh-navigation>
+    <div class="container">
+        <div ng-view></div>
+      </div>
+    
+
+
+<footer class="footer">
+        <div class="container">
+          <p class="text-muted text-center">
+            <a href="http://younsociety.com" target="_blank"><img src="/images/UNS.png" height="40" alt="You N Society"/></a>
+          </p>
+    
+          <p class="text-muted text-center">
+            <small>&copy; You N Society</small>
+          </p>
+        </div>
+      </footer>
+
+</body>
+</html>
