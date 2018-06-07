@@ -14,6 +14,10 @@ router.route('/uns/:volid').get(ctrluns.unsGetOne);
 
 router.route('/uns/newvol').post(ctrluns.unsvoladd);
 
+router.route('/vols').get(ctrluns.unsnoofvols);
+
+router.route('/query').post(ctrluns.unsquery);
+
 //authentication related routes
 
 router

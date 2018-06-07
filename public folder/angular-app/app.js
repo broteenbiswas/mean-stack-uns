@@ -37,8 +37,18 @@ function config($httpProvider,$routeProvider) {
         }
       }).when('/admin', {
         templateUrl: 'angular-app/admin/admin.html',
+        controller: AdminNumberOfVolsController,
+        controllerAs: 'vm',
         access: {
           restricted: true
+        }
+      }).when('/dashboard/query', {
+        templateUrl: 'angular-app/query/query.html',
+        controller: QueryController,
+        controllerAs: 'vm',
+        
+        access: {
+          restricted: false
         }
       }).otherwise({
         redirectedTo : '/'

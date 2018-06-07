@@ -134,3 +134,77 @@ module.exports.register = function(req, res) {
 };
 
 
+
+
+module.exports.unsnoofvols= function(req,res){
+  console.log('GET the count of volunteers');
+console.log(req.query);
+
+
+VolData
+  .find()
+  .exec(function(err, vols) {
+    console.log(err);
+    console.log(vols);
+    if (err) {
+      console.log("Error finding volunteers");
+      res
+        .status(500)
+        .json(err);
+    } else {
+      console.log("Found Volunteers", vols.length);
+      res
+        .json({count : vols.length});
+    }
+  });
+};
+
+module.exports.unsquery= function(req,res){
+  console.log('GET the query volunteer');
+
+
+var name= req.body.name;
+var program= req.body.program;
+
+if(name != "" && name!= null){
+
+VolData
+  .find({name : name, program :program })
+  .exec(function(err, vols) {
+    console.log(err);
+    console.log(vols);
+    if (err) {
+      console.log("Error finding volunteers");
+      res
+        .status(500)
+        .json(err);
+    } else {
+      console.log("Found Volunteers", vols.length);
+      res
+        .json(vols);
+    }
+  });
+}
+
+else if(name==null || name==""){
+  console.log("In else if because name is blank");
+  console.log("Parameter program is:" ,program);
+  VolData
+  .find({program :program })
+  .exec(function(err, vols) {
+    console.log(err);
+    console.log(vols);
+    if (err) {
+      console.log("Error finding volunteers");
+      res
+        .status(500)
+        .json(err);
+    } else {
+      console.log("Found Volunteers", vols.length);
+      res
+        .json(vols);
+    }
+  });
+
+}
+};
