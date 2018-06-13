@@ -6,9 +6,9 @@
   
       <h2>Logo</h2>
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="#section1">Dashboard</a></li>
-        <li class="active"><a href="#section2">Volunteer Query</a></li>
-        <li><a href="#section3">Volunteer Assign</a></li>
+        <li ><a href="#!/admin" style="color:black;">Dashboard</a></li>
+        <li class="active"><a href="#section2" style="color:black;">Volunteer Query</a></li>
+        <li><a href="#section3" style="color:black;">Volunteer Assign</a></li>
          </ul><br>
     
     
@@ -29,7 +29,7 @@
 
           <div class="form-group">
             <label for="program">Programs</label>
-            <select ng-model="vm.selectedProgram" ng-options="program for program in vm.programlist">
+            <select ng-model="vm.selectedProgram" ng-options="program for program in vm.programlist" style="color:black;">
             </select>
           </div>
           <button type="submit" class="btn btn-success">Query</button>
@@ -38,9 +38,19 @@
       <div ng-if="vm.isresponse">
         <div class="col-sm-9">
           <div class="well">
-            <ul>
-              <li ng-repeat="vol in vm.vols">{{vol.name}}</li>
-            </ul>
+            <table id = customers>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Program</th>
+              </tr>
+              <tr ng-repeat="vol in vm.vols">
+                <td style="color:black;">{{vol.name}}</td>
+                <td style="color:black;">{{vol.emailid}}</td>
+                <td style="color:black;">{{vol.program}}</td>
+              </tr>
+              
+            </table>
           </div>
         </div>
       </div>
