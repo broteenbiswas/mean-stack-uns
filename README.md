@@ -4,6 +4,13 @@
 
 An internal app for volunteers to see their assigned programs and no of kids they are impacting currently.
 
+### Technology stack:
+
+* Node.js
+* Express.js
+* MongoDB(Mongoose framework)
+* AngularJS
+
 ### Functionalities:
 
 * Volunteer Registration
