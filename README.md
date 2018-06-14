@@ -1,4 +1,4 @@
-# YOU N SOCIETTY(Internal app)
+# YOU N SOCIETY(Internal app)
 
 ## Synopsis
 
